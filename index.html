@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library SQL Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            /* Soft beautiful gradient */
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px #fff;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(7, 174, 143, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h2 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .sql-code {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            white-space: pre-line;
+            overflow-x: auto;
+        }
+
+        .output-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .output-image img {
+            max-width: 90%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📚 Library SQL Project</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>1️⃣ Create Database</h2>
+            <div class="sql-code">
+                CREATE DATABASE library;
+            </div>
+            <div class="output-image">
+                <a href="Screenshot 2025-05-07 152327.png" target="_blank">
+                    <img src="Screenshot 2025-05-07 152327.png" alt="Screenshot of Database Creation">
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>2️⃣ Delete Database</h2>
+            <div class="sql-code">
+                DROP DATABASE library;
+            </div>
+            <div class="output-image">
+                <a href="Screenshot 2025-05-07 152327.png" target="_blank">
+                    <img src="Screenshot 2025-05-07 152327.png" alt="Screenshot of Database Creation">
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3️⃣ Create Table: book_records</h2>
+            <div class="sql-code">
+                USE library;
+
+                CREATE TABLE book_records (
+                Book_Library_No INT PRIMARY KEY,
+                Book_Name VARCHAR(255) NOT NULL,
+                Author_Name VARCHAR(255) NOT NULL,
+                Book_Edition VARCHAR(50),
+                Price DECIMAL(10, 2)
+                );
+            </div>
+            <div class="output-image">
+                <a href="Screenshot 2025-05-07 152327.png" target="_blank">
+                    <img src="Screenshot 2025-05-07 152327.png" alt="Screenshot of Database Creation">
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>4️⃣ Delete Table</h2>
+            <div class="sql-code">
+                DROP TABLE book_records;
+            </div>
+            <div class="output-image">
+                <a href="Screenshot 2025-05-07 152327.png" target="_blank">
+                    <img src="Screenshot 2025-05-07 152327.png" alt="Screenshot of Database Creation">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
